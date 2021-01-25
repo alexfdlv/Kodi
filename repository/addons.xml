@@ -7,7 +7,8 @@
 	<extension point="xbmc.addon.repository" name="AlexFdlv Add-on repositorty">
 		<info compressed="false">https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/</datadir></extension>
+		<datadir zip="true">https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/</datadir>
+	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Add-ons repository from Alex Fdlv</summary>
 		<summary lang="ru">Репозиторий дополнений Alex Fdlv</summary>
