@@ -233,7 +233,7 @@ def copy_file(src: str, dst: str):
 
 if ( __name__ == "__main__" ):
     os.chdir(os.path.realpath(os.path.dirname(sys.argv[0]))) # сменить текущую папку на ту, в которой находится файл этого модуля
-    repository_path = os.path.abspath('_repository_')
+    repository_path = os.path.abspath(r'..\repository')
     addons_develop_path = os.path.abspath('.')
     addons_list = get_addons_list(addons_develop_path)
     copy_files_list = ['addon.xml', 'icon.png', 'fanart.jpg']
