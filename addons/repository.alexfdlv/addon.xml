@@ -4,10 +4,9 @@
 		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
 	<extension point="xbmc.addon.repository" name="AlexFdlv Add-on repositorty">
-		<info compressed="false">https://github.com/alexfdlv/kodi/addons/_repository_/raw/main/addons.xml</info>
-		<checksum>https://github.com/alexfdlv/kodi/addons/_repository_/raw/main/addons.xml.md5</checksum>
-		<datadir zip="true">https://github.com/alexfdlv/kodi/addons/_repository_/raw/main/</datadir>
-	</extension>
+		<info compressed="false">https://raw.githubusercontent.com/alexfdlv/kodi/main/addons/_repository_/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/alexfdlv/kodi/main/addons/_repository_/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/alexfdlv/kodi/main/addons/_repository_/</datadir></extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Add-ons repository from Alex Fdlv</summary>
 		<summary lang="ru">Репозиторий дополнений Alex Fdlv</summary>
