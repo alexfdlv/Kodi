@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.example.hello" name="Hello World" version="0.0.1" provider-name="Alex Fdlv">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">First script</summary>
+		<summary lang="ru">Первый скрипт</summary>
+		<description lang="en">This is my first test script for Kodi. Developed on python.</description>
+		<description lang="ru">Это мой первый тестовый скрипт для Kodi. Написан на языке python.</description>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
