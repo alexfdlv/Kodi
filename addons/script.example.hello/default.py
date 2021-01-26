@@ -12,7 +12,7 @@ class MyAddon(xbmcgui.Window):
 
     def __init__(self):
         # Создаем текстовую подпись.
-        label = xbmcgui.ControlLabel(550, 300, 200, 50, u'Привет, мир!')
+        label = xbmcgui.ControlLabel(550, 300, 200, 50, u'Привет, мир!!!')
         # Добавляем подпись в контейнер
         self.addControl(label)
 
