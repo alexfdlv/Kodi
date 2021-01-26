@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.alexfdlv" name="AlexFdlv Add-on repositorty" version="1.0.0" provider-name="Alex Fdlv">
+<addon id="repository.alexfdlv" name="AlexFdlv Add-on repositorty" version="1.0.1" provider-name="Alex Fdlv">
 	<extension point="xbmc.addon.repository" name="AlexFdlv Add-on repositorty">
 		<info compressed="false">https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/addons.xml.md5</checksum>
