@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="repository.alexfdlv" name="AlexFdlv Add-on repositorty" version="1.0.0" provider-name="Alex Fdlv">
+<addon id="repository.alexfdlv" name="AlexFdlv Add-on repositorty" version="0.0.1" provider-name="Alex Fdlv">
 	<extension point="xbmc.addon.repository" name="AlexFdlv Add-on repositorty">
 		<info compressed="false">https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/alexfdlv/kodi/main/repository/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Add-ons repository from Alex Fdlv</summary>
-		<summary lang="ru">Репозиторий дополнений Alex Fdlv</summary>
-		<description lang="en">Add-ons repository for personal use</description>
-		<description lang="ru">Репозиторий дополнений для личного использования.</description>
-		<disclaimer lang="en">Team KODI did not make all the add-ons on this repository and are not responsible for their content</disclaimer>
-		<disclaimer lang="ru">Разработчики KODI не являются авторами этих дополнений и не несут ответственность за их содержимое.</disclaimer>
+		<summary lang="en_GB">Add-ons repository from Alex Fdlv</summary>
+		<summary lang="ru_RU">Репозиторий дополнений Alex Fdlv</summary>
+		<description lang="en_GB">Add-ons repository for personal use</description>
+		<description lang="ru_RU">Репозиторий дополнений для личного использования.</description>
+		<disclaimer lang="en_GB">Team KODI did not make all the add-ons on this repository and are not responsible for their content</disclaimer>
+		<disclaimer lang="ru_RU">Разработчики KODI не являются авторами этих дополнений и не несут ответственность за их содержимое.</disclaimer>
 		<platform>all</platform>
+		<license>GPL-3.0-or-later</license>
 	</extension>
 </addon>
 
