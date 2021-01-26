@@ -18,7 +18,7 @@ if ( __name__ == "__main__" ):
     os.chdir(os.path.realpath(os.path.dirname(sys.argv[0]))) # сменить текущую папку на ту, в которой находится файл этого модуля
     addons_develop_path = os.path.abspath('.')
     addons_local_kodi_path = r'C:\Users\Alex\AppData\Roaming\Kodi\addons'
-    remote_path = r'\\Pc-inwin\загрузки'
+    remote_path = r'\\PC-INWIN\zeroq\.kodi\addons'
 
     addons_list = ['script.test']
 
