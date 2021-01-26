@@ -252,8 +252,11 @@ if ( __name__ == "__main__" ):
             copy_file(file_in_develop, file_in_repo)
         addon_version_from_xml = get_addon_version_from_xml(addon_name)
         zip_file = os.path.join(repository_path, addon_name, addon_name + '-' + addon_version_from_xml + '.zip')
-        if not os.path.exists(zip_file):
-            create_zip_file(get_files_for_zip(addon_name), zip_file)
-
+        # if not os.path.exists(zip_file):
+        create_zip_file(get_files_for_zip(addon_name), zip_file)
+        for element in os.listdir(os.path.join(repository_path, addon_name)):
+            if element.endswith('.zip') and element != addon_name + '-' + addon_version_from_xml + '.zip':
+                os.remove(os.path.join(repository_path, addon_name, element))
+                os.remove(os.path.join(repository_path, addon_name, element) + '.md5')
         data_for_addons_xml += get_data_for_addons_xml(addon_name) + '\n'
     create_addons_xml_file(repository_path, data_for_addons_xml)
