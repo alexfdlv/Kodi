@@ -77,15 +77,10 @@ def get_addons_list(path: str) -> list:
         Возврат: список имен дополнений (папок с дополнениями)
     '''
     dir_elements = sorted(os.listdir(path))
-    print(dir_elements)
-    print(os.path.exists(os.path.join(path, 'script.lkjh', 'addon.xml')))
     addons_list = []
     for item in dir_elements:
-        print(item)
-        if os.path.isdir(item) and os.path.exists(os.path.join(os.path.abspath(item), 'addon.xml')):
+        if os.path.isdir(os.path.join(path, item)) and os.path.exists(os.path.join(path, item, 'addon.xml')):
             addons_list.append(item)
-            print(item)
-    print(addons_list)
     return addons_list
 
 def get_files_for_zip(path: str) -> list :
@@ -241,26 +236,24 @@ if ( __name__ == "__main__" ):
     addons_develop_path = os.path.abspath('.')
     repository_path = os.path.abspath(r'..\repository')
     exclude_addons_list = ['script.develop']
-    # addons_list = sorted(list(set(get_addons_list(addons_develop_path)) - set(exclude_addons_list)))
-    # addons_list_in_repo_for_del = list(set(get_addons_list(repository_path)) - set(addons_list))
-    addons_list_in_repo = get_addons_list(repository_path)
-    # print(addons_list)
-    print(addons_list_in_repo)
-    # print(addons_list_in_repo_for_del)
-    # copy_files_list = ['addon.xml', 'icon.png', 'fanart.jpg']
-    # data_for_addons_xml = ''
-    # for addon_name in addons_list:
-    #     addon_dir_in_repo = os.path.join(repository_path, addon_name)
-    #     if not os.path.exists(addon_dir_in_repo):
-    #         os.makedirs(addon_dir_in_repo)
-    #     for file in copy_files_list:
-    #         file_in_develop = os.path.join(addons_develop_path, addon_name, file)
-    #         file_in_repo = os.path.join(repository_path, addon_name, file)
-    #         copy_file(file_in_develop, file_in_repo)
-    #     addon_version_from_xml = get_addon_version_from_xml(addon_name)
-    #     zip_file = os.path.join(repository_path, addon_name, addon_name + '-' + addon_version_from_xml + '.zip')
-    #     if not os.path.exists(zip_file):
-    #         create_zip_file(get_files_for_zip(addon_name), zip_file)
+    addons_list = sorted(list(set(get_addons_list(addons_develop_path)) - set(exclude_addons_list)))
+    addons_list_in_repo_for_del = list(set(get_addons_list(repository_path)) - set(addons_list))
+    for addon_dir in addons_list_in_repo_for_del:
+        shutil.rmtree(os.path.join(repository_path, addon_dir))
+    copy_files_list = ['addon.xml', 'icon.png', 'fanart.jpg']
+    data_for_addons_xml = ''
+    for addon_name in addons_list:
+        addon_dir_in_repo = os.path.join(repository_path, addon_name)
+        if not os.path.exists(addon_dir_in_repo):
+            os.makedirs(addon_dir_in_repo)
+        for file in copy_files_list:
+            file_in_develop = os.path.join(addons_develop_path, addon_name, file)
+            file_in_repo = os.path.join(repository_path, addon_name, file)
+            copy_file(file_in_develop, file_in_repo)
+        addon_version_from_xml = get_addon_version_from_xml(addon_name)
+        zip_file = os.path.join(repository_path, addon_name, addon_name + '-' + addon_version_from_xml + '.zip')
+        if not os.path.exists(zip_file):
+            create_zip_file(get_files_for_zip(addon_name), zip_file)
 
-    #     data_for_addons_xml += get_data_for_addons_xml(addon_name) + '\n'
-    # create_addons_xml_file(repository_path, data_for_addons_xml)
+        data_for_addons_xml += get_data_for_addons_xml(addon_name) + '\n'
+    create_addons_xml_file(repository_path, data_for_addons_xml)
