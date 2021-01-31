@@ -20,7 +20,7 @@ if ( __name__ == "__main__" ):
     addons_local_kodi_path = r'C:\Users\Alex\AppData\Roaming\Kodi\addons'
     remote_path = r'\\PC-INWIN\zeroq\.kodi\addons'
 
-    addons_list = ['script.test']
+    addons_list = ['script.develop']
 
     for addon_name in addons_list:
         src = os.path.join(addons_develop_path, addon_name)
@@ -28,6 +28,6 @@ if ( __name__ == "__main__" ):
         shutil.rmtree(dst)
         shutil.copytree(src, dst)
 
-        dst2 = os.path.join(remote_path, addon_name)
+        # dst2 = os.path.join(remote_path, addon_name)
         # shutil.rmtree(dst2)
-        shutil.copytree(src, dst2)
+        # shutil.copytree(src, dst2)
